@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>live-code 3</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-container{
+        margin-top: 0.5rem;
+    }
+    input{
+        width: 5rem;
+    }
+</style>
+<body>
+    <main>
+        <div class="input-container">
+            <label for="text">Enter a text</label>
+            <input type="text" value="" id="text">
+        </div>
+        <div class="btn-container">
+            <button class="btn" id="btn1">h1</button>
+            <button class="btn" id="btn2">h2</button>
+            <button class="btn" id="btn3">h3</button>
+        </div>
+    </main>
+    <script>
+        const inputEl = document.getElementById("text");
+        const btn1El = document.getElementById("btn1");
+        const btn2El = document.getElementById("btn2");
+        const btn3El = document.getElementById("btn3");
+
+        let h1 = 32;
+        let h2 = 24;
+        let h3 = 20.8;
+
+        function btn1Func(){
+            inputEl.value = "h1";
+            inputEl.style.fontSize = `${h1}px`
+        }
+        function btn2Func(){
+            inputEl.value = "h2";
+            inputEl.style.fontSize = `${h2}px`
+        }
+        function btn3Func(){
+            inputEl.value = "h3";
+            inputEl.style.fontSize = `${h3}px`
+        }
+
+        btn1El.addEventListener("click", btn1Func)
+        btn2El.addEventListener("click", btn2Func)
+        btn3El.addEventListener("click", btn3Func)
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
